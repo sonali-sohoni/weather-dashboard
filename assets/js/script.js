@@ -7,6 +7,7 @@ var citiesSearched = [];
 var localTime = "";
 function appLoader() {
 	getCities();
+	getCityWeather("Houston");
 	var url =
 		"api.openweathermap.org/data/2.5/weather?q=pune&appid=25eefc07a3a666558c043f66e4f22dd4";
 
@@ -228,6 +229,7 @@ function getCities() {
 		$(".city-list").append(liItem);
 		liItem.on("click", function () {
 			var city = $(this).attr("data-city").trim();
+		//	$(this).attr("style", "background-color:#f8f9fa; color:gray;");
 			getCityWeather(city);
 		});
 	}

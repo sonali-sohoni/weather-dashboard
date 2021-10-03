@@ -4,7 +4,64 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--gray: #8590aa;
+	--beige: #e7e3d4;
+	--navy: #303c6c;
+	--lightGray: #edeae5;
+	--lightblue: #c4dbf6;
+}
+
 .searchCol,
 .displayCol {
 	height: 100%;
+}
+
+.city-list li {
+	border: 2px solid whitesmoke;
+}
+
+.uvi-span {
+	border-radius: 40%;
+	padding: 5px 5px;
+}
+
+.city-list-item {
+	background-color: var(--gray);
+}
+
+.search-container,
+.search-body,
+.current-weather-card h3 ,
+.five-day-forecast h3{
+	background-color: var(--beige);
+}
+
+.search-container,
+.current-weather-card,
+.five-day-forecast .card {
+	border: 3px solid var(--gray);
+}
+
+span.desc,
+.span-time,
+p.desc {
+	font-size: 75%;
+	color: var(--navy);
+	text-align: left;
+}
+
+.span-time,
+p.desc {
+	font-size: 60%;
+	font-weight: bold;
+}
+
+#five-day-header {
+	color: var(--navy);
+}
+
+.five-day-forecast .card .card-body {
+	font-size: 90%;
+	font-weight: 500;
 }

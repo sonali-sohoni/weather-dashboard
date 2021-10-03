@@ -37,16 +37,16 @@
 	<body>
 		<!-- PAGE HEADER -->
 		<div class="container-fluid bg-primary">
-			<h2 class="text-center text-light p-3">Bootstrap Tutorial</h2>
+			<h2 class="text-center text-light p-3">Weather Dashboard</h2>
 		</div>
 
 		<!-- MAIN CONTENT AREA -->
 		<div class="container-fluid">
 			<div class="row">
 				<!-- search area -->
-				<div class="col-3 col-md-3">
+				<div class="col-md-3 col-sm-12 search-container">
 					<div class="card">
-						<div class="card-body">
+						<div class="card-body search-body">
 							<h3 class="card-title mb-3">Search For A City</h3>
 							<input
 								type="text"
@@ -54,7 +54,6 @@
 								style="width: 100%"
 								placeholder="City Name"
 								id="search-city"
-								value="paris"
 							/>
 							<button
 								type="button"
@@ -62,18 +61,15 @@
 								style="width: 100%"
 								id="search-btn"
 							>
-								<i class="fas fa-search"></i>
+								<i class="fas fa-search"> &nbsp;Search</i>
 							</button>
 						</div>
-						<ul class="list-group list-group-flush city-list">
-							<li class="list-group-item">Cras justo odio</li>
-							<li class="list-group-item">Dapibus ac facilisis in</li>
-							<li class="list-group-item">Vestibulum at eros</li>
-						</ul>
+						<ul class="list-group list-group-flush city-list"></ul>
 					</div>
 				</div>
 				<!-- weather display -->
-				<div class="col-9 col-md-9 current-weather">
+				<div class="col-md-9 col-sm-12 weather-container">
+					<div class="current-weather"></div>
 					<!-- <div class="card w-100">
 						<h5 class="card-header">Atlanta</h5>
 						<div class="card-body">
@@ -87,7 +83,7 @@
 
 					<!-- Five day forecast -->
 					<section>
-						<h4 class="text-center">5 Day Forecast</h4>
+						<h4 class="text-center mt-3 mb-3 p-3" id="five-day-header"></h4>
 						<div class="row justify-content-between five-day-forecast">
 							<!-- <div class="col-sm-2 col-md-2"> -->
 							<!-- <div class="col">
@@ -171,13 +167,14 @@
         </div>
       </div>
     </div> -->
-		<
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data-1970-2030.js"></script>
 		<script src="./assets/js/script.js"></script>
 	</body>
 </html>

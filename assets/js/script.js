@@ -8,7 +8,7 @@ var citiesSearched = [];
 var localTime = "";
 function appLoader() {
 	getCities();
-	getCityWeather("Houston");
+	//getCityWeather("Houston");
 	var url =
 		"api.openweathermap.org/data/2.5/weather?q=pune&appid=25eefc07a3a666558c043f66e4f22dd4";
 
@@ -53,6 +53,8 @@ function getCityWeather(city) {
 			getWeather(coord1.lon, coord1.lat);
 		})
 		.catch(function (error) {
+			$(".current-weather").empty();
+			$(".five-day-forecast").empty();
 			$(".current-weather").html(
 				"<h5 class='text-danger text-center'>Unable to pull weather data for the city selected.</h5>"
 			);

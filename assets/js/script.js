@@ -1,5 +1,6 @@
 window.onload = appLoader;
-var apiKey = "25eefc07a3a666558c043f66e4f22dd4";
+var apiKey = "0bad8b4e9f650e27675040db9017cc8e";
+//"25eefc07a3a666558c043f66e4f22dd4";
 var timeapikey = "DSPC3NAUU1BB";
 var search_city = "";
 var currentWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?";
@@ -72,7 +73,8 @@ function getWeather(lon, lat) {
 		lat +
 		"&lon=" +
 		lon +
-		"&exclude=hourly&units=imperial&appid=25eefc07a3a666558c043f66e4f22dd4";
+		"&exclude=hourly&units=imperial&appid=" +
+		apiKey; //25eefc07a3a666558c043f66e4f22dd4
 	console.log(url);
 	fetch(url)
 		.then(function (response) {
@@ -229,7 +231,7 @@ function getCities() {
 		$(".city-list").append(liItem);
 		liItem.on("click", function () {
 			var city = $(this).attr("data-city").trim();
-		//	$(this).attr("style", "background-color:#f8f9fa; color:gray;");
+			//	$(this).attr("style", "background-color:#f8f9fa; color:gray;");
 			getCityWeather(city);
 		});
 	}
